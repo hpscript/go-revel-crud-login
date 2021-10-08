@@ -1,43 +1,31 @@
-# Welcome to Revel
+# About
+This is a CRUD sample of Revel, the framework of Go. We use mysql for the database.
 
-A high-productivity web framework for the [Go language](http://www.golang.org/).
+### Create DB table and data
+```
+use test;
+create table baseballs(
+	id int primary key auto_increment,
+	name varchar(255),
+	manager varchar(255),
+	home varchar(255)
+);
+```
 
+```
+insert into baseballs(name, manager, home) values ('東京ヤクルトスワローズ', '高津臣吾', '明治神宮野球場');
+insert into baseballs(name, manager, home) values ('阪神タイガース', '矢野燿大', '阪神甲子園球場');
+insert into baseballs(name, manager, home) values ('読売ジャイアンツ', '原 辰徳', '東京ドーム');
+insert into baseballs(name, manager, home) values ('広島東洋カープ', '佐々岡真司', 'MAZDA Zoom-Zoom スタジアム 広島');
+insert into baseballs(name, manager, home) values ('中日ドラゴンズ', '与田剛', 'バンテリンドーム ナゴヤ');
+insert into baseballs(name, manager, home) values ('横浜DeNAベイスターズ', '三浦大輔', '横浜スタジアム');
+insert into baseballs(name, manager, home) values ('福岡ソフトバンクホークス', '工藤公康', '福岡PayPayドーム');
+insert into baseballs(name, manager, home) values ('千葉ロッテマリーンズ', '井口資仁', 'ZOZOマリンスタジアム');
+insert into baseballs(name, manager, home) values ('オリックス・バファローズ', '中嶋聡', '大阪市神戸市');
+insert into baseballs(name, manager, home) values ('北海道日本ハムファイターズ', '栗山英樹', '札幌ドーム');
+insert into baseballs(name, manager, home) values ('埼玉西武ライオンズ', '辻発彦', 'メットライフドーム');
+insert into baseballs(name, manager, home) values ('東北楽天ゴールデンイーグルス', '石井一久', '楽天生命パーク宮城');
+```
 
-### Start the web server:
-
-   revel run myapp
-
-### Go to http://localhost:9000/ and you'll see:
-
-    "It works"
-
-## Code Layout
-
-The directory structure of a generated Revel application:
-
-    conf/             Configuration directory
-        app.conf      Main app configuration file
-        routes        Routes definition file
-
-    app/              App sources
-        init.go       Interceptor registration
-        controllers/  App controllers go here
-        views/        Templates directory
-
-    messages/         Message files
-
-    public/           Public static assets
-        css/          CSS files
-        js/           Javascript files
-        images/       Image files
-
-    tests/            Test suites
-
-
-## Help
-
-* The [Getting Started with Revel](http://revel.github.io/tutorial/gettingstarted.html).
-* The [Revel guides](http://revel.github.io/manual/index.html).
-* The [Revel sample apps](http://revel.github.io/examples/index.html).
-* The [API documentation](https://godoc.org/github.com/revel/revel).
-
+### Run
+$ revel run -a app
