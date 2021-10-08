@@ -1,0 +1,44 @@
+{{set . "title" "チーム名" }}
+{{template "header.html" .}}
+
+<header class="jumbotron" style="background-color:#A9F16C">
+  <div class="container">
+    <div class="row">
+      <h1>球団登録</h1>
+      <p></p>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="span6">
+      {{template "flash.html" .}}
+      <form action="/store" method="post">
+      <table style="width:100%;padding:10px;">
+            <tbody>
+                  <tr>
+                      <td>球団名</td>
+                      <td><input type="text" name="name" value="{{.flash.name}}"></td>
+                  </tr>
+                  <tr>
+                      <td>監督</td>
+                      <td><input type="text" name="manager" value="{{.flash.manager}}"></td>
+                  </tr>
+                  <tr>
+                      <td>本拠地</td>
+                      <td><input type="text" name="home" value="{{.flash.home}}"></td>
+                  </tr>
+            </tbody>
+      </table>
+      <br>
+      <input type="submit" value="登録">
+      <form>
+
+      <br><br>
+      <a href="/">Back to index</a>
+    </div>
+  </div>
+</div>
+
+{{template "footer.html" .}}

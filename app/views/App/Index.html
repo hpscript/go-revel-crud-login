@@ -1,0 +1,40 @@
+{{set . "title" "Home"}}
+{{template "header.html" .}}
+
+<header class="jumbotron" style="background-color:#A9F16C">
+  <div class="container">
+    <div class="row">
+      <h1>野球チーム</h1>
+      <p></p>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="span6">
+      {{template "flash.html" .}}
+      <table >
+            <thead>
+                <tr>
+                    <th colspan="3">チーム名</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{ range .result}}
+                  <tr>
+                      <td>{{.ID}}</td>
+                      <td style="padding-left:10px;"><a href="/team/{{.ID}}">{{ .Name}}</a></td>
+                      <td style="padding-left:10px;"><a href="/edit/{{.ID}}">[Edit]</a></td>
+                      <td style="padding-left:10px;"><a href="/delete/{{.ID}}">[Delete]</a></td>
+                  </tr>
+                {{ end}}
+            </tbody>
+      </table>
+      <br>
+      - <a href="/create">球団登録</a>
+    </div>
+  </div>
+</div>
+
+{{template "footer.html" .}}

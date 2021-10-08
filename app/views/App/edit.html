@@ -1,0 +1,49 @@
+{{set . "title" "チーム名" }}
+{{template "header.html" .}}
+
+<header class="jumbotron" style="background-color:#A9F16C">
+  <div class="container">
+    <div class="row">
+      <h1>{{ .team.Name}}</h1>
+      <p></p>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="span6">
+      {{template "flash.html" .}}
+      <form action="/edit/complete" method="post">
+      <table style="width:100%;padding:10px;">
+            <input type="hidden" name="id" value="{{.team.ID}}">
+            <tbody>
+                  <tr>
+                      <td>ID</td>
+                      <td>{{.team.ID}}</td>
+                  </tr>
+                  <tr>
+                      <td>球団名</td>
+                      <td><input type="text" name="name" value="{{.team.Name}}"></td>
+                  </tr>
+                  <tr>
+                      <td>監督</td>
+                      <td><input type="text" name="manager" value="{{.team.Manager}}"></td>
+                  </tr>
+                  <tr>
+                      <td>本拠地</td>
+                      <td><input type="text" name="home" value="{{.team.Home}}"></td>
+                  </tr>
+            </tbody>
+      </table>
+      <br>
+      <input type="submit" value="更新">
+      <form>
+
+      <br><br>
+      <a href="/">Back to index</a>
+    </div>
+  </div>
+</div>
+
+{{template "footer.html" .}}

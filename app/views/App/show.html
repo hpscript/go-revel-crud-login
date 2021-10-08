@@ -1,0 +1,41 @@
+{{set . "title" "チーム名" }}
+{{template "header.html" .}}
+
+<header class="jumbotron" style="background-color:#A9F16C">
+  <div class="container">
+    <div class="row">
+      <h1>{{ .team.Name}}</h1>
+      <p></p>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="span6">
+      {{template "flash.html" .}}
+      <table style="width:100%;padding:10px;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>チーム名</th>
+                    <th>監督</th>
+                    <th>本拠地</th>
+                </tr>
+            </thead>
+            <tbody>
+                  <tr>
+                      <td>{{.team.ID}}</td>
+                      <td>{{.team.Name}}</td>
+                      <td>{{.team.Manager}}</td>
+                      <td>{{.team.Home}}</td>
+                  </tr>
+            </tbody>
+      </table>
+      <br>
+      <a href="/">Back to index</a>
+    </div>
+  </div>
+</div>
+
+{{template "footer.html" .}}
