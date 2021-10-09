@@ -145,12 +145,3 @@ func (c App) Logout() revel.Result {
 	return c.Redirect(App.Login)
 }
 
-// func (c App) Logined() revel.Result{
-// 	name := c.Session["userName"]
-// 	fmt.Println(name)
-
-// 	if name == nil {
-// 		return c.Redirect(App.Login)
-// 	}
-// 	return nil
-// }
