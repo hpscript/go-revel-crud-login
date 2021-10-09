@@ -1,8 +1,12 @@
 # About
-This is a CRUD and Login auth sample of Revel, the framework of Go. We use mysql for the database.
+This is a very simple Login and CRUD sample of Revel, the framework of Go. <br>
+As a login mechanism, a cookie is issued after login. If you log in from the login page, you will be redirected to the top page. Users who are not logged in cannot view the top page.<br>
+We use mysql for the database, please change to your user name and password from time to time.
 
 
 ### Create and insert user data for mysql
+First create a user table and insert user data.
+```
 create table users(
 	id int primary key auto_increment,
 	name varchar(255),
@@ -10,6 +14,7 @@ create table users(
 );
 
 insert into users(name, password) values ('user1', '5f4dcc3b5aa765d61d8327deb882cf99');
+```
 
 ### Create and insert data table for crud
 ```
