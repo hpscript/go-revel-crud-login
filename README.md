@@ -44,3 +44,6 @@ insert into baseballs(name, manager, home) values ('東北楽天ゴールデン�
 
 ### Run🔥
 $ revel run -a app
+
+### Video explanation
+Youtube: https://www.youtube.com/watch?v=STP4f1Ue33w
