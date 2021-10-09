@@ -42,5 +42,5 @@ insert into baseballs(name, manager, home) values ('埼玉西武ライオンズ'
 insert into baseballs(name, manager, home) values ('東北楽天ゴールデンイーグルス', '石井一久', '楽天生命パーク宮城');
 ```
 
-### Run
+### Run🔥
 $ revel run -a app
