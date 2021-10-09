@@ -7,6 +7,7 @@ We use mysql for the database, please change to your user name and password from
 ### Create and insert user data for mysql
 First create a user table and insert user data.
 ```
+use test;
 create table users(
 	id int primary key auto_increment,
 	name varchar(255),
@@ -18,7 +19,6 @@ insert into users(name, password) values ('user1', '5f4dcc3b5aa765d61d8327deb882
 
 ### Create and insert data table for crud
 ```
-use test;
 create table baseballs(
 	id int primary key auto_increment,
 	name varchar(255),
