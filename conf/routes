@@ -15,6 +15,10 @@ GET		/delete/:id			  App.Delete
 GET		/create				  App.Create
 POST	/store				  App.Store
 
+GET		/login				  App.Login
+POST	/auth				  App.Auth
+GET		/logout				  App.Logout
+
 # Ignore favicon requests
 GET     /favicon.ico                            404
 
