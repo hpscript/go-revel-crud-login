@@ -19,6 +19,7 @@ func (c App) Index() revel.Result {
 	if name == nil {
 		return c.Redirect(App.Login)
 	}
+	// fmt.Println(name)
 
 	result := []models.Baseballs{}
 	DB.Find(&result)
@@ -145,3 +146,12 @@ func (c App) Logout() revel.Result {
 	return c.Redirect(App.Login)
 }
 
+// func (c App) Logined() revel.Result{
+// 	name := c.Session["userName"]
+// 	fmt.Println(name)
+
+// 	if name == nil {
+// 		return c.Redirect(App.Login)
+// 	}
+// 	return nil
+// }
